@@ -13,6 +13,7 @@ import { user } from "../../datas/user";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Search from "../../pages/User/Components/Search";
+import CreatePostModal from "./CreatePostModal";
 
 const Sidebar: React.FC = () => {
   const navigate = useNavigate();
@@ -168,6 +169,8 @@ const Sidebar: React.FC = () => {
         </div>
       </div>
       {isSearchOpen && <Search />}
+
+      {isCreateOpen && <CreatePostModal onClose={() => setIsCreateOpen(false)} />}
     </div>
   );
 };
