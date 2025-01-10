@@ -35,7 +35,7 @@ const PostCard: React.FC<PostCardProps> = ({ username, avatarUrl, createdAt, ima
   };
 
   return (
-    <div className="max-w-[500px] mx-auto bg-white border rounded-md shadow-sm mb-6">
+    <div className="max-w-[500px] mx-auto bg-white border rounded-md shadow-sm">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b">
         <div className="flex items-center space-x-2">

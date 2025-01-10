@@ -4,10 +4,10 @@ import {
   FaSearch,
   FaCompass,
   FaVideo,
-  FaEnvelope,
   FaBell,
   FaPlusCircle,
   FaBars,
+  FaCommentDots,
 } from "react-icons/fa";
 import { user } from "../../datas/user";
 import { useNavigate } from "react-router-dom";
@@ -15,13 +15,17 @@ import { NavLink } from "react-router-dom";
 import Search from "../../pages/User/Components/Search";
 import CreatePostModal from "./CreatePostModal";
 
-const Sidebar: React.FC = () => {
+type Props = {
+  isCreateOpen: boolean;
+  setIsCreateOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Sidebar: React.FC<Props> = ({ isCreateOpen, setIsCreateOpen }) => {
   const navigate = useNavigate();
 
   const [isLabelShow, setIsLabelShow] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-  const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   return (
     <div className="flex">
@@ -112,7 +116,7 @@ const Sidebar: React.FC = () => {
               }
             >
               <span className="text-xl">
-                <FaEnvelope size={26} />
+                <FaCommentDots size={26} />
               </span>
               {isLabelShow && <span className="text-lg hidden 1300:block">Messages</span>}
             </NavLink>
