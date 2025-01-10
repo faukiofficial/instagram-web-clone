@@ -30,7 +30,7 @@ const Sidebar: React.FC<Props> = ({ isCreateOpen, setIsCreateOpen }) => {
   return (
     <div className="flex">
       <div
-        className={`hidden 600:flex flex-col justify-between h-screen ${
+        className={`hidden 700:flex flex-col justify-between h-screen ${
           isLabelShow ? "1600:w-80 1300:w-60 w-fit px-2" : "w-16 px-2"
         } py-6 border-r fixed`}
         onClick={() => {

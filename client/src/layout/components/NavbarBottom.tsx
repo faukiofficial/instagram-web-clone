@@ -25,7 +25,7 @@ const NavbarBottom: React.FC<Props> = ({ setIsCreateOpen })  => {
   ];
 
   return (
-    <div className="flex 600:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 justify-around items-center h-14 shadow-md">
+    <div className="flex 700:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 justify-around items-center h-12 shadow-md">
       {navItems.map((item) => (
         <NavLink
           to={item.to || ""}

@@ -9,9 +9,9 @@ const Layout: React.FC = () => {
   return (
     <div className="flex flex-row">
       <Sidebar isCreateOpen={isCreateOpen} setIsCreateOpen={setIsCreateOpen} />
-      <div className="1600:ml-80 1300:ml-60 600:ml-16 w-full">
+      <div className="1600:ml-80 1300:ml-60 700:ml-16 w-full">
         <NavbarTop />
-        <div className="my-[60px] 600:mt-0">
+        <div className="my-[60px] 700:mt-0">
           <Outlet />
         </div>
         <NavbarBottom setIsCreateOpen={setIsCreateOpen} />

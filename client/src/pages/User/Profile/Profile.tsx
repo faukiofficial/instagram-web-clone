@@ -8,16 +8,14 @@ const Profile: React.FC = () => {
   const [isFollowersModalOpen, setIsFollowersModalOpen] = useState(false);
   const [isFollowingModalOpen, setIsFollowingModalOpen] = useState(false);
 
-  // Fungsi untuk menangani "Remove" dan "Unfollow" action
   const handleAction = (user: User, action: string) => {
     console.log(action, user.userName);
-    // Implementasikan logika untuk "Remove" atau "Unfollow"
   };
   return (
     <div className="max-w-4xl mx-auto p-4 mt-5">
-      <div className="flex items-start gap-12 mb-8">
+      <div className="flex items-start gap-4 700:gap-12 mb-8">
         {/* Foto Profile */}
-        <div className="w-[180px] h-[180px] rounded-full border overflow-hidden">
+        <div className="min-w-[100px] w-[100px] h-[100px] 700:min-w-[180px] 700:w-[180px] 700:h-[180px] rounded-full border overflow-hidden">
           <img
             src={user.avatarUrl}
             alt={user.fullName}
